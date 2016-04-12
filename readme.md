@@ -30,7 +30,7 @@ Q: Who can walk me through the rMVC pattern, highlighting where the router is an
 
 ## Routes (10 min)
 
-Fork/clone the [tunr_rails_routes_resources repo](https://github.com/ga-wdi-exercises/tunr_rails_routes_resources).  This provides starter code for this lesson. This repo also contains a solution branch containing all the code we'll be executing today.
+Fork/clone the [tunr_rails_routes_resources repo](https://github.com/ATL-WDI-Exercises/tunr_rails_routes_resources).  This provides starter code for this lesson. This repo also contains a solution branch containing all the code we'll be executing today.
 
 You guys dove into Rails' `config/routes.rb` file in the MVC class and created individual routes for pages.
 
@@ -96,23 +96,24 @@ DELETE     /artists/:id      artists#destroy
 
 ```bash
 Prefix        Verb   URI Pattern                 Controller#Action
+-----------------------------------------------------------------
 
 artists       GET    /artists(.:format)          artists#index
-          POST   /artists(.:format)          artists#create
+              POST   /artists(.:format)          artists#create
 new_artist    GET    /artists/new(.:format)      artists#new
 edit_artist   GET    /artists/:id/edit(.:format) artists#edit
 artist        GET    /artists/:id(.:format)      artists#show
-          PATCH  /artists/:id(.:format)      artists#update
-          PUT    /artists/:id(.:format)      artists#update
-          DELETE /artists/:id(.:format)      artists#destroy
+              PATCH  /artists/:id(.:format)      artists#update
+              PUT    /artists/:id(.:format)      artists#update
+              DELETE /artists/:id(.:format)      artists#destroy
 songs         GET    /songs(.:format)            songs#index
-          POST   /songs(.:format)            songs#create
+              POST   /songs(.:format)            songs#create
 new_song      GET    /songs/new(.:format)        songs#new
 edit_song     GET    /songs/:id/edit(.:format)   songs#edit
 song          GET    /songs/:id(.:format)        songs#show
-          PATCH  /songs/:id(.:format)        songs#update
-          PUT    /songs/:id(.:format)        songs#update
-          DELETE /songs/:id(.:format)        songs#destroy
+              PATCH  /songs/:id(.:format)        songs#update
+              PUT    /songs/:id(.:format)        songs#update
+              DELETE /songs/:id(.:format)        songs#destroy
 ```
 
 
@@ -135,9 +136,10 @@ Looking at this output from `rake routes`,
 
 ```bash
 Prefix        Verb   URI Pattern                 Controller#Action
+------------------------------------------------------------------
 
 artists       GET    /artists(.:format)          artists#index
-          POST   /artists(.:format)          artists#create
+              POST   /artists(.:format)          artists#create
 new_artist    GET    /artists/new(.:format)      artists#new
 edit_artist   GET    /artists/:id/edit(.:format) artists#edit
 artist        GET    /artists/:id(.:format)      artists#show
